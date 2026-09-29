@@ -1,0 +1,35 @@
+{
+  "name": "aftersignal",
+  "private": true,
+  "version": "1.0.0",
+  "description": "AFTERSIGNAL - a 2.5D mystery, investigation and debate game built with TypeScript and Three.js.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run typecheck && npm run validate && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "validate": "tsx tools/validate-case.ts",
+    "test": "vitest run",
+    "e2e": "playwright test",
+    "art:briefs": "node tools/make-briefs.mjs",
+    "art:gen": "node tools/codex-gen.mjs",
+    "art:post": "python tools/postprocess.py"
+  },
+  "dependencies": {
+    "@fontsource/anton": "5.3.0",
+    "@fontsource/black-han-sans": "5.3.0",
+    "@fontsource/ibm-plex-mono": "5.3.0",
+    "@fontsource/noto-sans-kr": "5.3.0",
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@types/node": "24.19.0",
+    "@types/three": "0.186.0",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vite": "8.3.1",
+    "vitest": "5.0.2"
+  }
+}

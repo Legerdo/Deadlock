@@ -1,0 +1,17 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+*.log
+.vite/
+.DS_Store
+
+# Codex art pipeline: raw PNG masters (~67 MB), agent logs and rejected takes stay local.
+# The shipped WebP files, prompts and manifest are committed.
+art/raw/
+art/logs/
+art/rejected/
+
+# local review scratch output (screenshots in artifacts/screenshots are committed)
+artifacts/peek/
+artifacts/contact/
