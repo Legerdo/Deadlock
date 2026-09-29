@@ -1,0 +1,850 @@
+{
+  "generatedBy": "tools/postprocess.py",
+  "assets": [
+    {
+      "id": "char_kai_neutral",
+      "file": "assets/generated/characters/kai_neutral.webp",
+      "purpose": "canonical full-body portrait (dialogue + 3D billboard)",
+      "character": "kai",
+      "expression": "neutral",
+      "source": "codex-cli",
+      "generationMode": "generate",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/char_kai_neutral.md",
+      "referenceAssets": [],
+      "rawFile": "art/raw/char_kai_neutral.png",
+      "rawDimensions": "1024x1536",
+      "dimensions": "1024x1536",
+      "smallFile": "assets/generated/characters/sm/kai_neutral.webp",
+      "transparent": true,
+      "bbox": [
+        0.2676,
+        0.0098,
+        0.7373,
+        0.9896
+      ]
+    },
+    {
+      "id": "char_theo_neutral",
+      "file": "assets/generated/characters/theo_neutral.webp",
+      "purpose": "canonical full-body portrait (dialogue + 3D billboard)",
+      "character": "theo",
+      "expression": "neutral",
+      "source": "codex-cli",
+      "generationMode": "generate",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/char_theo_neutral.md",
+      "referenceAssets": [],
+      "rawFile": "art/raw/char_theo_neutral.png",
+      "rawDimensions": "1024x1536",
+      "dimensions": "1024x1536",
+      "smallFile": "assets/generated/characters/sm/theo_neutral.webp",
+      "transparent": true,
+      "bbox": [
+        0.2871,
+        0.0521,
+        0.7158,
+        0.9492
+      ]
+    },
+    {
+      "id": "char_helena_neutral",
+      "file": "assets/generated/characters/helena_neutral.webp",
+      "purpose": "canonical full-body portrait (dialogue + 3D billboard)",
+      "character": "helena",
+      "expression": "neutral",
+      "source": "codex-cli",
+      "generationMode": "generate",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/char_helena_neutral.md",
+      "referenceAssets": [],
+      "rawFile": "art/raw/char_helena_neutral.png",
+      "rawDimensions": "1024x1536",
+      "dimensions": "1024x1536",
+      "smallFile": "assets/generated/characters/sm/helena_neutral.webp",
+      "transparent": true,
+      "bbox": [
+        0.2852,
+        0.0072,
+        0.7217,
+        0.9889
+      ]
+    },
+    {
+      "id": "char_bas_neutral",
+      "file": "assets/generated/characters/bas_neutral.webp",
+      "purpose": "canonical full-body portrait (dialogue + 3D billboard)",
+      "character": "bas",
+      "expression": "neutral",
+      "source": "codex-cli",
+      "generationMode": "generate",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/char_bas_neutral.md",
+      "referenceAssets": [],
+      "rawFile": "art/raw/char_bas_neutral.png",
+      "rawDimensions": "1024x1536",
+      "dimensions": "1024x1536",
+      "smallFile": "assets/generated/characters/sm/bas_neutral.webp",
+      "transparent": true,
+      "bbox": [
+        0.1279,
+        0.0065,
+        0.8652,
+        0.9863
+      ]
+    },
+    {
+      "id": "char_lumi_neutral",
+      "file": "assets/generated/characters/lumi_neutral.webp",
+      "purpose": "canonical full-body portrait (dialogue + 3D billboard)",
+      "character": "lumi",
+      "expression": "neutral",
+      "source": "codex-cli",
+      "generationMode": "generate",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/char_lumi_neutral.md",
+      "referenceAssets": [],
+      "rawFile": "art/raw/char_lumi_neutral.png",
+      "rawDimensions": "1024x1536",
+      "dimensions": "1024x1536",
+      "smallFile": "assets/generated/characters/sm/lumi_neutral.webp",
+      "transparent": true,
+      "bbox": [
+        0.1768,
+        0.0566,
+        0.7666,
+        0.9421
+      ]
+    },
+    {
+      "id": "char_oskar_neutral",
+      "file": "assets/generated/characters/oskar_neutral.webp",
+      "purpose": "canonical full-body portrait (dialogue + 3D billboard)",
+      "character": "oskar",
+      "expression": "neutral",
+      "source": "codex-cli",
+      "generationMode": "generate",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/char_oskar_neutral.md",
+      "referenceAssets": [],
+      "rawFile": "art/raw/char_oskar_neutral.png",
+      "rawDimensions": "1024x1536",
+      "dimensions": "1024x1536",
+      "smallFile": "assets/generated/characters/sm/oskar_neutral.webp",
+      "transparent": true,
+      "bbox": [
+        0.2666,
+        0.0039,
+        0.7578,
+        0.9928
+      ]
+    },
+    {
+      "id": "char_wren_neutral",
+      "file": "assets/generated/characters/wren_neutral.webp",
+      "purpose": "canonical full-body portrait (dialogue + 3D billboard)",
+      "character": "wren",
+      "expression": "neutral",
+      "source": "codex-cli",
+      "generationMode": "generate",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/char_wren_neutral.md",
+      "referenceAssets": [],
+      "rawFile": "art/raw/char_wren_neutral.png",
+      "rawDimensions": "1024x1536",
+      "dimensions": "1024x1536",
+      "smallFile": "assets/generated/characters/sm/wren_neutral.webp",
+      "transparent": true,
+      "bbox": [
+        0.2998,
+        0.071,
+        0.6992,
+        0.9225
+      ]
+    },
+    {
+      "id": "char_kai_thinking",
+      "file": "assets/generated/characters/kai_thinking.webp",
+      "purpose": "expression variant derived by image edit from the canonical portrait",
+      "character": "kai",
+      "expression": "thinking",
+      "source": "codex-cli",
+      "generationMode": "edit",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/char_kai_thinking.md",
+      "referenceAssets": [
+        "char_kai_neutral"
+      ],
+      "rawFile": "art/raw/char_kai_thinking.png",
+      "rawDimensions": "1024x1536",
+      "dimensions": "1024x1536",
+      "smallFile": "assets/generated/characters/sm/kai_thinking.webp",
+      "transparent": true,
+      "bbox": [
+        0.3154,
+        0.0091,
+        0.7402,
+        0.9896
+      ]
+    },
+    {
+      "id": "char_kai_surprised",
+      "file": "assets/generated/characters/kai_surprised.webp",
+      "purpose": "expression variant derived by image edit from the canonical portrait",
+      "character": "kai",
+      "expression": "surprised",
+      "source": "codex-cli",
+      "generationMode": "edit",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/char_kai_surprised.md",
+      "referenceAssets": [
+        "char_kai_neutral"
+      ],
+      "rawFile": "art/raw/char_kai_surprised.png",
+      "rawDimensions": "1024x1536",
+      "dimensions": "1024x1536",
+      "smallFile": "assets/generated/characters/sm/kai_surprised.webp",
+      "transparent": true,
+      "bbox": [
+        0.2734,
+        0.0091,
+        0.7275,
+        0.9688
+      ]
+    },
+    {
+      "id": "char_kai_determined",
+      "file": "assets/generated/characters/kai_angry.webp",
+      "purpose": "expression variant derived by image edit from the canonical portrait",
+      "character": "kai",
+      "expression": "angry",
+      "source": "codex-cli",
+      "generationMode": "edit",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/char_kai_determined.md",
+      "referenceAssets": [
+        "char_kai_neutral"
+      ],
+      "rawFile": "art/raw/char_kai_determined.png",
+      "rawDimensions": "1024x1536",
+      "dimensions": "1024x1536",
+      "smallFile": "assets/generated/characters/sm/kai_angry.webp",
+      "transparent": true,
+      "bbox": [
+        0.2988,
+        0.0085,
+        0.748,
+        0.9902
+      ]
+    },
+    {
+      "id": "char_theo_happy",
+      "file": "assets/generated/characters/theo_happy.webp",
+      "purpose": "expression variant derived by image edit from the canonical portrait",
+      "character": "theo",
+      "expression": "happy",
+      "source": "codex-cli",
+      "generationMode": "edit",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/char_theo_happy.md",
+      "referenceAssets": [
+        "char_theo_neutral"
+      ],
+      "rawFile": "art/raw/char_theo_happy.png",
+      "rawDimensions": "1024x1536",
+      "dimensions": "1024x1536",
+      "smallFile": "assets/generated/characters/sm/theo_happy.webp",
+      "transparent": true,
+      "bbox": [
+        0.2266,
+        0.0137,
+        0.7373,
+        0.9512
+      ]
+    },
+    {
+      "id": "char_theo_thinking",
+      "file": "assets/generated/characters/theo_thinking.webp",
+      "purpose": "expression variant derived by image edit from the canonical portrait",
+      "character": "theo",
+      "expression": "thinking",
+      "source": "codex-cli",
+      "generationMode": "edit",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/char_theo_thinking.md",
+      "referenceAssets": [
+        "char_theo_neutral"
+      ],
+      "rawFile": "art/raw/char_theo_thinking.png",
+      "rawDimensions": "1024x1536",
+      "dimensions": "1024x1536",
+      "smallFile": "assets/generated/characters/sm/theo_thinking.webp",
+      "transparent": true,
+      "bbox": [
+        0.2725,
+        0.015,
+        0.6943,
+        0.9557
+      ]
+    },
+    {
+      "id": "char_helena_angry",
+      "file": "assets/generated/characters/helena_angry.webp",
+      "purpose": "expression variant derived by image edit from the canonical portrait",
+      "character": "helena",
+      "expression": "angry",
+      "source": "codex-cli",
+      "generationMode": "edit",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/char_helena_angry.md",
+      "referenceAssets": [
+        "char_helena_neutral"
+      ],
+      "rawFile": "art/raw/char_helena_angry.png",
+      "rawDimensions": "1024x1536",
+      "dimensions": "1024x1536",
+      "smallFile": "assets/generated/characters/sm/helena_angry.webp",
+      "transparent": true,
+      "bbox": [
+        0.2812,
+        0.0078,
+        0.7305,
+        0.9902
+      ]
+    },
+    {
+      "id": "char_helena_surprised",
+      "file": "assets/generated/characters/helena_surprised.webp",
+      "purpose": "expression variant derived by image edit from the canonical portrait",
+      "character": "helena",
+      "expression": "surprised",
+      "source": "codex-cli",
+      "generationMode": "edit",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/char_helena_surprised.md",
+      "referenceAssets": [
+        "char_helena_neutral"
+      ],
+      "rawFile": "art/raw/char_helena_surprised.png",
+      "rawDimensions": "1024x1536",
+      "dimensions": "1024x1536",
+      "smallFile": "assets/generated/characters/sm/helena_surprised.webp",
+      "transparent": true,
+      "bbox": [
+        0.2832,
+        0.0072,
+        0.7266,
+        0.9896
+      ]
+    },
+    {
+      "id": "char_helena_distressed",
+      "file": "assets/generated/characters/helena_distressed.webp",
+      "purpose": "expression variant derived by image edit from the canonical portrait",
+      "character": "helena",
+      "expression": "distressed",
+      "source": "codex-cli",
+      "generationMode": "edit",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/char_helena_distressed.md",
+      "referenceAssets": [
+        "char_helena_neutral"
+      ],
+      "rawFile": "art/raw/char_helena_distressed.png",
+      "rawDimensions": "1024x1536",
+      "dimensions": "1024x1536",
+      "smallFile": "assets/generated/characters/sm/helena_distressed.webp",
+      "transparent": true,
+      "bbox": [
+        0.2822,
+        0.0078,
+        0.7285,
+        0.9694
+      ]
+    },
+    {
+      "id": "char_bas_happy",
+      "file": "assets/generated/characters/bas_happy.webp",
+      "purpose": "expression variant derived by image edit from the canonical portrait",
+      "character": "bas",
+      "expression": "happy",
+      "source": "codex-cli",
+      "generationMode": "edit",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/char_bas_happy.md",
+      "referenceAssets": [
+        "char_bas_neutral"
+      ],
+      "rawFile": "art/raw/char_bas_happy.png",
+      "rawDimensions": "1024x1536",
+      "dimensions": "1024x1536",
+      "smallFile": "assets/generated/characters/sm/bas_happy.webp",
+      "transparent": true,
+      "bbox": [
+        0.1553,
+        0.0065,
+        0.8672,
+        0.987
+      ]
+    },
+    {
+      "id": "char_bas_surprised",
+      "file": "assets/generated/characters/bas_surprised.webp",
+      "purpose": "expression variant derived by image edit from the canonical portrait",
+      "character": "bas",
+      "expression": "surprised",
+      "source": "codex-cli",
+      "generationMode": "edit",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/char_bas_surprised.md",
+      "referenceAssets": [
+        "char_bas_neutral"
+      ],
+      "rawFile": "art/raw/char_bas_surprised.png",
+      "rawDimensions": "1024x1536",
+      "dimensions": "1024x1536",
+      "smallFile": "assets/generated/characters/sm/bas_surprised.webp",
+      "transparent": true,
+      "bbox": [
+        0.0967,
+        0.0059,
+        0.9033,
+        0.9876
+      ]
+    },
+    {
+      "id": "char_bas_distressed",
+      "file": "assets/generated/characters/bas_distressed.webp",
+      "purpose": "expression variant derived by image edit from the canonical portrait",
+      "character": "bas",
+      "expression": "distressed",
+      "source": "codex-cli",
+      "generationMode": "edit",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/char_bas_distressed.md",
+      "referenceAssets": [
+        "char_bas_neutral"
+      ],
+      "rawFile": "art/raw/char_bas_distressed.png",
+      "rawDimensions": "1024x1536",
+      "dimensions": "1024x1536",
+      "smallFile": "assets/generated/characters/sm/bas_distressed.webp",
+      "transparent": true,
+      "bbox": [
+        0.1445,
+        0.0033,
+        0.8691,
+        0.9876
+      ]
+    },
+    {
+      "id": "char_lumi_happy",
+      "file": "assets/generated/characters/lumi_happy.webp",
+      "purpose": "expression variant derived by image edit from the canonical portrait",
+      "character": "lumi",
+      "expression": "happy",
+      "source": "codex-cli",
+      "generationMode": "edit",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/char_lumi_happy.md",
+      "referenceAssets": [
+        "char_lumi_neutral"
+      ],
+      "rawFile": "art/raw/char_lumi_happy.png",
+      "rawDimensions": "1024x1536",
+      "dimensions": "1024x1536",
+      "smallFile": "assets/generated/characters/sm/lumi_happy.webp",
+      "transparent": true,
+      "bbox": [
+        0.1445,
+        0.0111,
+        0.8125,
+        0.9785
+      ]
+    },
+    {
+      "id": "char_lumi_surprised",
+      "file": "assets/generated/characters/lumi_surprised.webp",
+      "purpose": "expression variant derived by image edit from the canonical portrait",
+      "character": "lumi",
+      "expression": "surprised",
+      "source": "codex-cli",
+      "generationMode": "edit",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/char_lumi_surprised.md",
+      "referenceAssets": [
+        "char_lumi_neutral"
+      ],
+      "rawFile": "art/raw/char_lumi_surprised.png",
+      "rawDimensions": "1024x1536",
+      "dimensions": "1024x1536",
+      "smallFile": "assets/generated/characters/sm/lumi_surprised.webp",
+      "transparent": true,
+      "bbox": [
+        0.2402,
+        0.0592,
+        0.7754,
+        0.9414
+      ]
+    },
+    {
+      "id": "char_lumi_distressed",
+      "file": "assets/generated/characters/lumi_distressed.webp",
+      "purpose": "expression variant derived by image edit from the canonical portrait",
+      "character": "lumi",
+      "expression": "distressed",
+      "source": "codex-cli",
+      "generationMode": "edit",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/char_lumi_distressed.md",
+      "referenceAssets": [
+        "char_lumi_neutral"
+      ],
+      "rawFile": "art/raw/char_lumi_distressed.png",
+      "rawDimensions": "1024x1536",
+      "dimensions": "1024x1536",
+      "smallFile": "assets/generated/characters/sm/lumi_distressed.webp",
+      "transparent": true,
+      "bbox": [
+        0.2197,
+        0.0072,
+        0.7881,
+        0.9688
+      ]
+    },
+    {
+      "id": "char_oskar_happy",
+      "file": "assets/generated/characters/oskar_happy.webp",
+      "purpose": "expression variant derived by image edit from the canonical portrait",
+      "character": "oskar",
+      "expression": "happy",
+      "source": "codex-cli",
+      "generationMode": "edit",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/char_oskar_happy.md",
+      "referenceAssets": [
+        "char_oskar_neutral"
+      ],
+      "rawFile": "art/raw/char_oskar_happy.png",
+      "rawDimensions": "1024x1536",
+      "dimensions": "1024x1536",
+      "smallFile": "assets/generated/characters/sm/oskar_happy.webp",
+      "transparent": true,
+      "bbox": [
+        0.2461,
+        0.0039,
+        0.7588,
+        0.9928
+      ]
+    },
+    {
+      "id": "char_oskar_surprised",
+      "file": "assets/generated/characters/oskar_surprised.webp",
+      "purpose": "expression variant derived by image edit from the canonical portrait",
+      "character": "oskar",
+      "expression": "surprised",
+      "source": "codex-cli",
+      "generationMode": "edit",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/char_oskar_surprised.md",
+      "referenceAssets": [
+        "char_oskar_neutral"
+      ],
+      "rawFile": "art/raw/char_oskar_surprised.png",
+      "rawDimensions": "1024x1536",
+      "dimensions": "1024x1536",
+      "smallFile": "assets/generated/characters/sm/oskar_surprised.webp",
+      "transparent": true,
+      "bbox": [
+        0.2656,
+        0.0039,
+        0.749,
+        0.9928
+      ]
+    },
+    {
+      "id": "char_oskar_angry",
+      "file": "assets/generated/characters/oskar_angry.webp",
+      "purpose": "expression variant derived by image edit from the canonical portrait",
+      "character": "oskar",
+      "expression": "angry",
+      "source": "codex-cli",
+      "generationMode": "edit",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/char_oskar_angry.md",
+      "referenceAssets": [
+        "char_oskar_neutral"
+      ],
+      "rawFile": "art/raw/char_oskar_angry.png",
+      "rawDimensions": "1024x1536",
+      "dimensions": "1024x1536",
+      "smallFile": "assets/generated/characters/sm/oskar_angry.webp",
+      "transparent": true,
+      "bbox": [
+        0.2979,
+        0.0026,
+        0.7539,
+        0.9941
+      ]
+    },
+    {
+      "id": "char_wren_thinking",
+      "file": "assets/generated/characters/wren_thinking.webp",
+      "purpose": "expression variant derived by image edit from the canonical portrait",
+      "character": "wren",
+      "expression": "thinking",
+      "source": "codex-cli",
+      "generationMode": "edit",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/char_wren_thinking.md",
+      "referenceAssets": [
+        "char_wren_neutral"
+      ],
+      "rawFile": "art/raw/char_wren_thinking.png",
+      "rawDimensions": "1024x1536",
+      "dimensions": "1024x1536",
+      "smallFile": "assets/generated/characters/sm/wren_thinking.webp",
+      "transparent": true,
+      "bbox": [
+        0.3125,
+        0.0671,
+        0.6992,
+        0.9232
+      ]
+    },
+    {
+      "id": "char_wren_surprised",
+      "file": "assets/generated/characters/wren_surprised.webp",
+      "purpose": "expression variant derived by image edit from the canonical portrait",
+      "character": "wren",
+      "expression": "surprised",
+      "source": "codex-cli",
+      "generationMode": "edit",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/char_wren_surprised.md",
+      "referenceAssets": [
+        "char_wren_neutral"
+      ],
+      "rawFile": "art/raw/char_wren_surprised.png",
+      "rawDimensions": "1024x1536",
+      "dimensions": "1024x1536",
+      "smallFile": "assets/generated/characters/sm/wren_surprised.webp",
+      "transparent": true,
+      "bbox": [
+        0.2988,
+        0.0605,
+        0.6992,
+        0.9043
+      ]
+    },
+    {
+      "id": "char_wren_distressed",
+      "file": "assets/generated/characters/wren_distressed.webp",
+      "purpose": "expression variant derived by image edit from the canonical portrait",
+      "character": "wren",
+      "expression": "distressed",
+      "source": "codex-cli",
+      "generationMode": "edit",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/char_wren_distressed.md",
+      "referenceAssets": [
+        "char_wren_neutral"
+      ],
+      "rawFile": "art/raw/char_wren_distressed.png",
+      "rawDimensions": "1024x1536",
+      "dimensions": "1024x1536",
+      "smallFile": "assets/generated/characters/sm/wren_distressed.webp",
+      "transparent": true,
+      "bbox": [
+        0.3398,
+        0.0762,
+        0.6934,
+        0.9232
+      ]
+    },
+    {
+      "id": "keyart_title",
+      "file": "assets/generated/keyart/title.webp",
+      "purpose": "title screen key visual",
+      "character": null,
+      "expression": null,
+      "source": "codex-cli",
+      "generationMode": "generate",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/keyart_title.md",
+      "referenceAssets": [],
+      "rawFile": "art/raw/keyart_title.png",
+      "rawDimensions": "1536x1024",
+      "dimensions": "1536x1024",
+      "transparent": false
+    },
+    {
+      "id": "cutin_empty_booth",
+      "file": "assets/generated/cutins/empty_booth.webp",
+      "purpose": "story cut-in illustration",
+      "character": null,
+      "expression": null,
+      "source": "codex-cli",
+      "generationMode": "generate",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/cutin_empty_booth.md",
+      "referenceAssets": [],
+      "rawFile": "art/raw/cutin_empty_booth.png",
+      "rawDimensions": "1536x1024",
+      "dimensions": "1536x1024",
+      "transparent": false
+    },
+    {
+      "id": "cutin_discovery",
+      "file": "assets/generated/cutins/discovery.webp",
+      "purpose": "story cut-in illustration",
+      "character": null,
+      "expression": null,
+      "source": "codex-cli",
+      "generationMode": "edit",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/cutin_discovery.md",
+      "referenceAssets": [
+        "char_theo_neutral"
+      ],
+      "rawFile": "art/raw/cutin_discovery.png",
+      "rawDimensions": "1536x1024",
+      "dimensions": "1536x1024",
+      "transparent": false
+    },
+    {
+      "id": "cutin_lever",
+      "file": "assets/generated/cutins/lever.webp",
+      "purpose": "story cut-in illustration",
+      "character": null,
+      "expression": null,
+      "source": "codex-cli",
+      "generationMode": "generate",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/cutin_lever.md",
+      "referenceAssets": [],
+      "rawFile": "art/raw/cutin_lever.png",
+      "rawDimensions": "1536x1024",
+      "dimensions": "1536x1024",
+      "transparent": false
+    },
+    {
+      "id": "cutin_message",
+      "file": "assets/generated/cutins/message.webp",
+      "purpose": "story cut-in illustration",
+      "character": null,
+      "expression": null,
+      "source": "codex-cli",
+      "generationMode": "edit",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/cutin_message.md",
+      "referenceAssets": [
+        "char_theo_neutral"
+      ],
+      "rawFile": "art/raw/cutin_message.png",
+      "rawDimensions": "1536x1024",
+      "dimensions": "1536x1024",
+      "transparent": false
+    },
+    {
+      "id": "cutin_dawn",
+      "file": "assets/generated/cutins/dawn.webp",
+      "purpose": "story cut-in illustration",
+      "character": null,
+      "expression": null,
+      "source": "codex-cli",
+      "generationMode": "generate",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/cutin_dawn.md",
+      "referenceAssets": [],
+      "rawFile": "art/raw/cutin_dawn.png",
+      "rawDimensions": "1536x1024",
+      "dimensions": "1536x1024",
+      "transparent": false
+    },
+    {
+      "id": "env_mural",
+      "file": "assets/generated/environment/mural.webp",
+      "purpose": "3D environment texture (poster / mural / window)",
+      "character": null,
+      "expression": null,
+      "source": "codex-cli",
+      "generationMode": "generate",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/env_mural.md",
+      "referenceAssets": [],
+      "rawFile": "art/raw/env_mural.png",
+      "rawDimensions": "1536x1024",
+      "dimensions": "1536x1024",
+      "transparent": false
+    },
+    {
+      "id": "env_poster_show",
+      "file": "assets/generated/environment/poster_show.webp",
+      "purpose": "3D environment texture (poster / mural / window)",
+      "character": null,
+      "expression": null,
+      "source": "codex-cli",
+      "generationMode": "edit",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/env_poster_show.md",
+      "referenceAssets": [
+        "char_theo_neutral"
+      ],
+      "rawFile": "art/raw/env_poster_show.png",
+      "rawDimensions": "1024x1536",
+      "dimensions": "1024x1536",
+      "transparent": false
+    },
+    {
+      "id": "env_photo_1979",
+      "file": "assets/generated/environment/photo_1979.webp",
+      "purpose": "3D environment texture (poster / mural / window)",
+      "character": null,
+      "expression": null,
+      "source": "codex-cli",
+      "generationMode": "generate",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/env_photo_1979.md",
+      "referenceAssets": [],
+      "rawFile": "art/raw/env_photo_1979.png",
+      "rawDimensions": "1024x1024",
+      "dimensions": "1024x1024",
+      "transparent": false
+    },
+    {
+      "id": "env_window_storm",
+      "file": "assets/generated/environment/window_storm.webp",
+      "purpose": "3D environment texture (poster / mural / window)",
+      "character": null,
+      "expression": null,
+      "source": "codex-cli",
+      "generationMode": "generate",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/env_window_storm.md",
+      "referenceAssets": [],
+      "rawFile": "art/raw/env_window_storm.png",
+      "rawDimensions": "1536x1024",
+      "dimensions": "1536x1024",
+      "transparent": false
+    },
+    {
+      "id": "env_window_dawn",
+      "file": "assets/generated/environment/window_dawn.webp",
+      "purpose": "3D environment texture (poster / mural / window)",
+      "character": null,
+      "expression": null,
+      "source": "codex-cli",
+      "generationMode": "edit",
+      "model": "Codex CLI built-in image_gen (image model not exposed by the tool); agent model gpt-6-luna",
+      "promptFile": "art/prompts/env_window_dawn.md",
+      "referenceAssets": [
+        "env_window_storm"
+      ],
+      "rawFile": "art/raw/env_window_dawn.png",
+      "rawDimensions": "1536x1024",
+      "dimensions": "1536x1024",
+      "transparent": false
+    }
+  ]
+}
