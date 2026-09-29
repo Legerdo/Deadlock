@@ -13,8 +13,7 @@ export class AudioEngine {
   private music!: GainNode;
   private sfxBus!: GainNode;
   private noiseBuf!: AudioBuffer;
-  private drone: { stop: () => void } | null = null;
-  private pulseTimer: number | null = null;
+  private score: { stop: () => void } | null = null;
   private mood: Mood = 'off';
   private settings: Settings;
 
@@ -54,7 +53,7 @@ export class AudioEngine {
     if (!this.ctx) return;
     const t = this.ctx.currentTime;
     this.master.gain.setTargetAtTime(s.master, t, 0.05);
-    this.music.gain.setTargetAtTime(s.music * 0.55, t, 0.05);
+    this.music.gain.setTargetAtTime(s.music * 0.4, t, 0.05);
     this.sfxBus.gain.setTargetAtTime(s.sfx, t, 0.05);
   }
 
@@ -181,94 +180,88 @@ export class AudioEngine {
     if (mood === this.mood) return;
     this.mood = mood;
     if (!this.ctx) return;
-    this.drone?.stop();
-    this.drone = null;
-    if (this.pulseTimer !== null) window.clearInterval(this.pulseTimer);
-    this.pulseTimer = null;
-    if (mood === 'off') return;
-    const base = { calm: 55, night: 49, tension: 46.25, hearing: 41.2, dawn: 65.4 }[mood];
-    this.drone = this.makeDrone(base, mood === 'dawn' ? [1, 1.5, 2.5] : [1, 1.498, 2.01, 2.997]);
-    if (mood === 'tension' || mood === 'hearing') {
-      const period = mood === 'hearing' ? 860 : 1500;
-      this.pulseTimer = window.setInterval(() => this.pulse(mood === 'hearing'), period);
-    }
+    this.score?.stop();
+    this.score = mood === 'off' ? null : this.makeScore(mood);
   }
 
-  private makeDrone(freq: number, ratios: number[]) {
+  /** Quiet, sparse keys over slowly changing chords; no hiss or percussion. */
+  private makeScore(mood: Exclude<Mood, 'off'>) {
     const ctx = this.ctx!;
+    const themes = {
+      calm: { beat: 1.05, chords: [[57, 60, 64, 71], [53, 57, 60, 67], [48, 55, 59, 64], [55, 59, 62, 69]] },
+      night: { beat: 1.25, chords: [[57, 60, 64, 71], [53, 57, 60, 64], [50, 57, 60, 65], [52, 59, 62, 67]] },
+      tension: { beat: 0.95, chords: [[50, 57, 60, 64], [46, 53, 57, 60], [48, 55, 58, 62], [45, 52, 55, 59]] },
+      hearing: { beat: 0.8, chords: [[52, 55, 59, 66], [48, 55, 59, 62], [50, 57, 60, 64], [47, 54, 57, 62]] },
+      dawn: { beat: 1.15, chords: [[60, 64, 67, 71], [55, 59, 62, 69], [57, 60, 64, 67], [53, 57, 60, 67]] },
+    };
+    const theme = themes[mood];
     const out = ctx.createGain();
-    out.gain.value = 0;
-    out.gain.setTargetAtTime(0.18, ctx.currentTime, 1.5);
-    const lp = ctx.createBiquadFilter();
-    lp.type = 'lowpass';
-    lp.frequency.value = 700;
-    out.connect(lp).connect(this.music);
-    const lfo = ctx.createOscillator();
-    const lfoGain = ctx.createGain();
-    lfo.frequency.value = 0.07;
-    lfoGain.gain.value = 250;
-    lfo.connect(lfoGain).connect(lp.frequency);
-    lfo.start();
-    const oscs = ratios.map((r, i) => {
-      const o = ctx.createOscillator();
-      o.type = i === 0 ? 'sine' : 'triangle';
-      o.frequency.value = freq * r;
-      o.detune.value = (i - 1) * 6;
-      const g = ctx.createGain();
-      g.gain.value = 0.5 / (i + 1);
-      o.connect(g).connect(out);
-      o.start();
-      return o;
-    });
-    // rain / tape hiss bed
-    const hiss = ctx.createBufferSource();
-    hiss.buffer = this.noiseBuf;
-    hiss.loop = true;
-    const hf = ctx.createBiquadFilter();
-    hf.type = 'bandpass';
-    hf.frequency.value = 1200;
-    hf.Q.value = 0.3;
-    const hg = ctx.createGain();
-    hg.gain.value = 0.05;
-    hiss.connect(hf).connect(hg).connect(this.music);
-    hiss.start();
+    const filter = ctx.createBiquadFilter();
+    filter.type = 'lowpass';
+    filter.frequency.value = 1800;
+    filter.Q.value = 0.5;
+    out.connect(filter).connect(this.music);
+    const started = ctx.currentTime;
+    out.gain.setValueAtTime(0, started);
+    out.gain.linearRampToValueAtTime(1, started + 1.5);
+    const voices = new Set<OscillatorNode>();
+
+    const note = (midi: number, at: number, duration: number, level: number, pad: boolean) => {
+      const oscillator = ctx.createOscillator();
+      const gain = ctx.createGain();
+      oscillator.type = 'sine';
+      oscillator.frequency.value = 440 * 2 ** ((midi - 69) / 12);
+      gain.gain.setValueAtTime(0, at);
+      gain.gain.linearRampToValueAtTime(level, at + (pad ? 0.9 : 0.035));
+      gain.gain.exponentialRampToValueAtTime(0.0001, at + duration);
+      gain.gain.linearRampToValueAtTime(0, at + duration + 0.1);
+      oscillator.connect(gain).connect(out);
+      voices.add(oscillator);
+      oscillator.onended = () => {
+        oscillator.disconnect();
+        gain.disconnect();
+        voices.delete(oscillator);
+      };
+      oscillator.start(at);
+      oscillator.stop(at + duration + 0.15);
+    };
+
+    let step = 0;
+    let next = started + 0.05;
+    const schedule = () => {
+      // Skip elapsed beats after suspension instead of producing a burst of notes.
+      if (next < ctx.currentTime) next = ctx.currentTime + 0.05;
+      while (next < ctx.currentTime + 0.3) {
+        const bar = Math.floor(step / 8);
+        const position = step % 8;
+        const chord = theme.chords[bar % theme.chords.length]!;
+        if (position === 0) {
+          chord.slice(0, 3).forEach((pitch) => note(pitch, next, theme.beat * 7.5, 0.024, true));
+        }
+        // Leave alternate beats empty so dialogue has room to breathe.
+        if (position % 2 === 0) {
+          const pattern = bar % 2 === 0 ? [0, 2, 3, 1] : [2, 1, 3, 2];
+          note(chord[pattern[position / 2]!]! + 12, next, theme.beat * 2.8, 0.065, false);
+        }
+        step++;
+        next += theme.beat;
+      }
+    };
+    schedule();
+    const timer = window.setInterval(schedule, 100);
     return {
       stop: () => {
-        const t = ctx.currentTime;
-        out.gain.setTargetAtTime(0, t, 0.4);
-        hg.gain.setTargetAtTime(0, t, 0.4);
+        window.clearInterval(timer);
+        const now = ctx.currentTime;
+        out.gain.cancelAndHoldAtTime(now);
+        out.gain.linearRampToValueAtTime(0, now + 1.2);
+        // Audio-clock stops also work while the tab's JS timers are throttled.
+        voices.forEach((voice) => voice.stop(now + 1.25));
         window.setTimeout(() => {
-          oscs.forEach((o) => o.stop());
-          lfo.stop();
-          hiss.stop();
-        }, 2000);
+          out.disconnect();
+          filter.disconnect();
+        }, 1500);
       },
     };
-  }
-
-  private pulse(strong: boolean) {
-    if (!this.ctx) return;
-    const t = this.ctx.currentTime;
-    const o = this.ctx.createOscillator();
-    const g = this.ctx.createGain();
-    o.type = 'sine';
-    o.frequency.setValueAtTime(strong ? 62 : 55, t);
-    o.frequency.exponentialRampToValueAtTime(38, t + 0.25);
-    this.env(g, t, 0.005, strong ? 0.35 : 0.22, 0.3);
-    o.connect(g).connect(this.music);
-    o.start(t);
-    o.stop(t + 0.4);
-    if (strong) {
-      const h = this.ctx.createBufferSource();
-      h.buffer = this.noiseBuf;
-      const f = this.ctx.createBiquadFilter();
-      f.type = 'highpass';
-      f.frequency.value = 7000;
-      const hg = this.ctx.createGain();
-      this.env(hg, t + 0.43, 0.002, 0.05, 0.05);
-      h.connect(f).connect(hg).connect(this.music);
-      h.start(t + 0.43, Math.random());
-      h.stop(t + 0.6);
-    }
   }
 }
